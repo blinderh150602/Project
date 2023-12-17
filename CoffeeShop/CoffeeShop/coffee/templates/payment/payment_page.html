@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">  
+    <title>Trang thanh toán</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Trang thanh toán</h1>
+        <form method="POST" action="{% url 'payment_page' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ và tên">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại">
+            </div>
+            <div class="form-group">
+                <label for="address">Địa chỉ giao hàng:</label>
+                <textarea id="address" name="address" placeholder="Nhập địa chỉ giao hàng"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="card_number">Số thẻ:</label>
+                <input type="text" id="card_number" name="card_number" placeholder="Nhập số thẻ">
+            </div>
+            <div class="form-group">
+                <label for="expiry_date">Ngày hết hạn:</label>
+                <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Nhập CVV">
+            </div>
+            <input type="submit" value="Thanh toán">
+        </form>
+    </div>
+</body>
+</html>
+
+

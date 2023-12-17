@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Đăng nhập</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Tên đăng nhập" required>
+            <input type="password" name="password" placeholder="Mật khẩu" required>
+            <button id="login-button" type="submit">Đăng nhập</button>
+            <a href="{% url 'logout' %}">Đăng xuất</a>
+        </form>
+    </div>
+    <script>
+        document.getElementById("login-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định khi submit form
+            window.location.href ="{% url 'home' %}";
+        });
+     </script>
+</body>
+</html>

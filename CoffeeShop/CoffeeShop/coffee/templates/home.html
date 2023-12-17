@@ -1,0 +1,23 @@
+        {% extends 'base.html '%}
+        {% block content %}
+        <h1 style= "text-align: center;">HOME</h1>
+        <div class="row">
+            {% for coffee in coffee %}
+            <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{coffee.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{coffee.name}}</h5>
+                  <p class="card-text">{{coffee.price}}đ</p>
+                  <div class="buttons_added">
+                    <input aria-label="quantity" class="input-qty" max="Số tối đa" min="Số tối thiểu" name="" type="number" value="">
+                  </div>
+                  <style="color:blue" button type="button">
+                    <a href="{% url 'payment_page' %}">Thanh Toán</a>
+                </style=>
+                
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        {% endblock %}

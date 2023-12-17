@@ -1,0 +1,40 @@
+<!-- payment_success.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Success</title>
+    <style>
+        /* CSS styles */
+        body {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        .success-message {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment Success</h1>
+    <div class="success-message">
+        <p>Your payment has been successful!</p>
+        <!-- Additional success message or details can be added here -->
+        <a href="/base/" id="login-again">Đăng nhập lại</a>
+    </div>
+
+    <script>
+        document.getElementById("login-again").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "{% url 'home' %}";
+        });
+    </script>
+</body>
+</html>

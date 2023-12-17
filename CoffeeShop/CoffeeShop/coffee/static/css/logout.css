@@ -1,0 +1,22 @@
+.logout-container {
+    width: 300px;
+    margin: 150px auto;
+    padding: 66px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f6f3ac;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    display: block;
+
+    margin-top: 10px;
+}

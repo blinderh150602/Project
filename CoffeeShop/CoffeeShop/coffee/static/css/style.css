@@ -1,0 +1,140 @@
+.container {
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 100px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button[type="submit"] {
+     width: 20%; 
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.profile_dropdown{
+    background-image: url('../images/avata.jpg');
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    margin-left: 20px;
+}
+.profile_dropdown ul{
+    display: none;
+}
+.arrow-down::before{
+    content: "\25bc";
+    color: #000;
+    display: block;
+    margin-top: 8px;
+    margin-left: 45px;
+}
+/* Dropdown styles */
+
+.dropdown {
+    margin-left: 20px;
+}
+
+.dropdown-btn {
+    background: none;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.dropdown-btn .avatar{
+    background-image: url(../images/avata.jpg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+}
+.arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #000;
+    transition: transform ease-in-out 0.3s;
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    list-style: none;
+    position: absolute;
+    top: 40px;
+    min-width: 100px;
+    left: -45px;
+    visibility: hidden;
+    overflow: hidden;
+    padding: 0;
+    z-index: 1;
+}
+.dropdown-content.active{
+    visibility: visible;
+}
+.dropdown-content li {
+    background: #2f3238;
+    border-radius: 0.5em;
+    position: relative;
+}
+
+
+.dropdown-content li:hover {
+    background: #1d1f24;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 0.7em 0.5em;
+    color: #fff;
+    margin: 0.1em 0;
+    text-decoration: none;
+}
+button:focus{
+    outline: none !important;
+}
+
